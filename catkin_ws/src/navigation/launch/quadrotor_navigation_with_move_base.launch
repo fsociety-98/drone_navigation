@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<launch>
+  
+
+  <arg name="open_rviz" default="true" />
+  
+  <!-- Map server 
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+  -->
+
+  <!-- Hector quadrotor -->
+  <include file="$(find hector_quadrotor_demo)/launch/empty_world.launch"/>
+
+  <!-- GMAPPING -->
+  <include file="$(find mapping)/launch/gmapping.launch"/>
+
+  <!-- AMCL -->
+  <include file="$(find navigation)/launch/amcl.launch"/>
+
+  <!-- move_base -->
+  <include file="$(find navigation)/launch/move_base.launch">
+  </include>
+  
+ 
+  <group if="$(arg open_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find navigation)/rviz/quadrotor_navigation.rviz"/>
+  </group>
+
+</launch>

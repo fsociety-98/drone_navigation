@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<launch>
+<arg name="namespace" default="uav1"/>
+
+   <group ns="$(arg namespace)">
+
+   <include file="$(find multidrone_exploration)/launch/uav1/multi_drone_frontier_exploration_mapping.launch" />
+ 
+   <include file="$(find multidrone_exploration)/launch/uav1/multi_drone_frontier_exploration_amcl.launch" />
+   
+   <include file="$(find multidrone_exploration)/launch/uav1/multi_drone_frontier_exploration_move_base.launch" >
+   	
+   </include>
+
+   <include file="$(find multidrone_exploration)/launch/uav1/multi_drone_frontier_exploration_no_global_map_core.launch" >
+   	
+   </include>
+
+   <node name="rviz_uav1" pkg="rviz" type="rviz" args="-d $(find multidrone_exploration)/rviz/robot.rviz" output="screen"/>
+<!--
+-->
+	</group>
+</launch>
+

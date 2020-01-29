@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/sumanth/PROJECT/drone_navigation/catkin_ws/install/setup.sh

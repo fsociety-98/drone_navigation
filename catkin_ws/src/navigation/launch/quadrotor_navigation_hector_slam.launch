@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<launch>
+  
+
+  <arg name="open_rviz" default="true" />
+  
+  <!-- Map server 
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+  -->
+
+  <!-- Hector quadrotor -->
+  <include file="$(find hector_quadrotor_demo)/launch/empty_world.launch"/>
+
+  <!-- HECTOR_SLAM -->
+  <include file="$(find mapping)/launch/hector_slam.launch"/>
+
+  <!-- AMCL -->
+  <include file="$(find navigation)/launch/amcl.launch"/>
+
+  <!-- point navigation -->
+  <include file="$(find point_navigation)/launch/point_navigation.launch">
+  </include>
+  
+ 
+  
+
+</launch>

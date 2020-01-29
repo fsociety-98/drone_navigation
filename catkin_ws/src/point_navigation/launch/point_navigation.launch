@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+	<node pkg="point_navigation" type="goToPoint.py" 
+		name="goToPoint" output="screen"/>
+
+
+	<node pkg="point_navigation" type="goToPointClient.py" name="goToPointClient" output="screen"/>
+
+	<node pkg="point_navigation" type="HeightBalancer.py" name="height_balance" args="uav0" output="screen">
+		
+	</node>
+
+</launch>

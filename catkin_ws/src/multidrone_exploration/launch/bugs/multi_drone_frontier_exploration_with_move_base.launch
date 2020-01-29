@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<launch>
+
+   <include file="$(find hector_quadrotor_demo)/launch/empty_world.launch"/>
+
+   <include file="$(find single_drone_frontier_exploration)/launch/single_drone_frontier_exploration_mapping.launch" />
+ 
+   <include file="$(find single_drone_frontier_exploration)/launch/single_drone_frontier_exploration_amcl.launch" />
+   
+   <include file="$(find single_drone_frontier_exploration)/launch/single_drone_frontier_exploration_move_base.launch" />
+
+   <include file="$(find single_drone_frontier_exploration)/launch/single_drone_frontier_exploration_no_global_map_core.launch" />
+
+   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find single_drone_frontier_exploration)/rviz/robot.rviz" output="screen"/>
+
+</launch>

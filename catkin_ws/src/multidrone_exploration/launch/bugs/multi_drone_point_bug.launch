@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+	
+	<node pkg="point_navigation" type="HeightBalancer.py" output="screen" name="uav0_height_balance" args="uav0">
+		
+	</node>
+
+	<node pkg="point_navigation" type="HeightBalancer.py" name="uav1_height_balance" output="screen" args="uav1">
+		
+	</node>
+
+</launch>

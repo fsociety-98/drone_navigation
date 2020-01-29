@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<launch>
+
+	<include file="$(find multidrone_exploration)/launch/uav0/multi_drone_frontier_exploration_move_base_and_point_nav.launch">
+		
+	</include>
+
+	<include file="$(find multidrone_exploration)/launch/uav1/multi_drone_frontier_exploration_move_base_and_point_nav.launch">
+	</include>
+	
+</launch>
