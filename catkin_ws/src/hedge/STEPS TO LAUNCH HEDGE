@@ -1,0 +1,22 @@
+STEPS TO LAUNCH HEDGE
+---------------------
+COPY THE droneWorld.world(Found in worlds folder) file to gazebo resource path --> /usr/share/gazebo-7/worlds
+ 
+$ roslaunch multidrone_exploration muti_drone_sim.launch
+
+$ rosservice call /uav0/enable_motors True
+
+$ rosservice call /uav1/enable_motors True
+
+$ rosrun tf static_transform_publisher 0 0 0 0 0 0 /uav0/world /uav1/world 10
+
+$ roslaunch hedge hedge_gmap_uav0.launch
+
+$ roslaunch hedge hedge_gmap_uav1.launch
+
+$ roslaunch hedge hedge_uav0.launch
+
+$ roslaunch hedge hedge_uav1.launch
+
+$ roslaunch hedge height_balance.launch
+

@@ -6,7 +6,7 @@
         controller/velocity
         controller/position
         "/>
-<include file="$(find hedge)/launch/droneWorld.launch"/>
+<include file="$(find gazebo_ros)/launch/willowgarage_world.launch"/>
 
 
 

@@ -65,9 +65,10 @@ def balance(dt):
 
 if __name__ == '__main__':
 
-    global pub,sub
+    global pub,sub,height_to_maintain
 
     prefix = sys.argv[1]
+    height_to_maintain = float(sys.argv[2])
     print("Prefix is: "+prefix)
 	
     rospy.init_node(prefix+"Height_Balancer")

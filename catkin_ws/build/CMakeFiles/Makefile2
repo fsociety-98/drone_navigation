@@ -4884,6 +4884,24 @@ clean: hector_quadrotor/hector_quadrotor_model/CMakeFiles/hector_quadrotor_aerod
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory hedge
+
+# Convenience name for "all" pass in the directory.
+hedge/all:
+
+.PHONY : hedge/all
+
+# Convenience name for "clean" pass in the directory.
+hedge/clean:
+
+.PHONY : hedge/clean
+
+# Convenience name for "preinstall" pass in the directory.
+hedge/preinstall:
+
+.PHONY : hedge/preinstall
+
+#=============================================================================
 # Directory level rules for directory multidrone_exploration
 
 # Convenience name for "all" pass in the directory.
